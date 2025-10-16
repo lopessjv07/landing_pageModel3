@@ -5,7 +5,7 @@
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
+  --radius-lg: var(---radius);
   --radius-xl: calc(var(--radius) + 4px);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -113,6 +113,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -149,7 +150,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 80px 20px;
-  background: linear-gradient(135deg, #02113d 0%, #002d68 50%, #002f69 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
   overflow: hidden;
 }
 
@@ -160,15 +161,22 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 80%, rgba(96, 165, 250, 0.3) 0%, transparent 50%);
   animation: pulse-bg 8s ease-in-out infinite;
 }
 
 @keyframes pulse-bg {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
+
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 .hero-content {
@@ -222,6 +230,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -271,6 +280,7 @@ body {
   text-align: center;
   transition: all 0.4s ease;
   cursor: pointer;
+  margin: auto auto;
 }
 
 .benefit-card:hover {
@@ -458,6 +468,7 @@ body {
   font-size: 1.2rem;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.85);
+  text-align: left;
 }
 
 /* Price Section */
@@ -507,7 +518,7 @@ body {
   display: inline-block;
   width: 100%;
   padding: 25px 50px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: #1e3a8a;
   background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
@@ -550,35 +561,262 @@ body {
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .section {
+    padding: 80px 20px;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .module-card {
+    padding: 30px;
+  }
+
+  .module-title {
+    font-size: 1.6rem;
+  }
+
+  .instructor-name {
+    font-size: 2.2rem;
+  }
+
+  .instructor-bio {
+    font-size: 1.1rem;
+  }
+
+  .price-card {
+    padding: 50px 30px;
+  }
+
+  .price-value {
+    font-size: 3.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1.2rem;
   }
-  
+
   .hero-cta {
     padding: 15px 35px;
     font-size: 1.1rem;
   }
-  
+
+  .section {
+    padding: 60px 15px;
+  }
+
   .section-title {
     font-size: 2rem;
+    margin-bottom: 40px;
   }
-  
-  .module-title {
-    font-size: 1.4rem;
-  }
-  
-  .price-value {
-    font-size: 3rem;
-  }
-  
+
   .benefits-grid,
   .bonus-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .benefit-card,
+  .bonus-card {
+    padding: 30px 20px;
+  }
+
+  .module-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .module-number {
+    font-size: 1.5rem;
+    min-width: unset;
+  }
+
+  .module-title {
+    font-size: 1.4rem;
+  }
+
+  .module-description {
+    font-size: 1rem;
+  }
+
+  .instructor-avatar {
+    width: 150px;
+    height: 150px;
+    font-size: 4rem;
+  }
+
+  .instructor-name {
+    font-size: 2rem;
+  }
+
+  .instructor-bio {
+    font-size: 1rem;
+  }
+
+  .price-card {
+    padding: 40px 20px;
+  }
+
+  .price-value {
+    font-size: 3rem;
+  }
+
+  .price-installment {
+    font-size: 1.1rem;
+  }
+
+  .price-cta {
+    padding: 20px 30px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.3rem;
+    text-align: left;
+    margin: 20px;
+    margin-top: -60px;
+    margin-bottom: 30px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 40px;
+    margin: 20px;
+  }
+
+  .hero-cta {
+    padding: 12px 25px;
+    font-size: 1rem;
+    margin-bottom: -30px;
+  }
+
+  .hero-section {
+    position: relative;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+    overflow: hidden;
+  }
+
+  .section {
+    padding: 40px 10px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .benefit-icon,
+  .bonus-icon {
+    font-size: 2.5rem;
+  }
+
+  .benefit-title,
+  .bonus-title {
+    font-size: 1.2rem;
+  }
+
+  .module-card {
+    padding: 25px;
+  }
+
+  .benefit-description {
+    text-align: left;
+  }
+
+  .bonus-description {
+    text-align: left;
+  }
+
+  .module-title {
+    font-size: 1.2rem;
+  }
+
+  .module-lesson {
+    font-size: 0.9rem;
+    padding-left: 25px;
+  }
+
+  .module-lesson::before {
+    font-size: 1rem;
+  }
+
+  .instructor-avatar {
+    width: 120px;
+    height: 120px;
+    font-size: 3rem;
+  }
+
+  .instructor-name {
+    font-size: 1.8rem;
+  }
+
+  .instructor-bio {
+    text-align: left;
+  }
+
+  .price-value {
+    font-size: 2.5rem;
+  }
+
+  .price-installment {
+    font-size: 1rem;
+  }
+
+  .price-cta {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 0.5rem;
+    font-weight: 800;
+    color: #1e3a8a;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 15px 40px rgba(251, 191, 36, 0.4);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .price-cta {
+    font-size: 0.9rem;
+  }
+
+  .price-guarantee {
+    font-size: 0.9rem;
+    display: flex;
+    text-align: left;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
   }
 }
 
@@ -589,9 +827,12 @@ html {
 
 /* Animations */
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }

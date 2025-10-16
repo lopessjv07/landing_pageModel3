@@ -163,12 +163,12 @@ function App() {
       {/* About Section */}
       <section className="section" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)' }}>
         <div className="container">
-          <h2 className="section-title">O Que Você Vai Aprender</h2>
-          <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-            <p style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'rgba(255, 255, 255, 0.85)', marginBottom: '30px' }}>
+          <h2 className="section-title">O Que Você Vai Aprender?</h2>
+          <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'left' }}>
+            <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: 'rgba(255, 255, 255, 0.85)', marginBottom: '30px' }}>
               O <strong style={{ color: '#fbbf24' }}>Fórmula do Lucro</strong> é um treinamento prático e direto, criado pra quem tá cansado de tentar de tudo e nunca ver resultado. Aqui você vai aprender como gerar sua primeira renda online, mesmo começando do zero, sem investir em anúncios e sem precisar ser expert.
             </p>
-            <p style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'rgba(255, 255, 255, 0.85)' }}>
+            <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: 'rgba(255, 255, 255, 0.85)' }}>
               O método foi desenvolvido pra funcionar com apenas um celular e conexão com a internet, usando ferramentas simples e estratégias aplicáveis no mesmo dia. <strong style={{ color: '#60a5fa' }}>Do zero ao lucro — simples, direto e testado.</strong>
             </p>
           </div>
@@ -237,17 +237,18 @@ function App() {
       {/* Price Section */}
       <section id="price-section" className="section price-section">
         <div className="container">
-          <h2 className="section-title">Garanta Sua Vaga Agora</h2>
+          <h2 className="section-title">Garanta Sua Vaga Agora!</h2>
           <div className="price-card">
             <span className="price-badge">🔥 Oferta Especial</span>
+            <p style={{ fontSize: '1.0rem', lineHeight: '1.8', color: 'rgba(180, 180, 180, 1)', marginBottom: '10px' }}>de R$ 497 por:</p>
             <div className="price-value">R$ 297</div>
-            <p className="price-installment">ou 12x de R$ 29,70 sem juros</p>
+            <p className="price-installment">ou 10x de R$ 29,70 sem juros</p>
             <button className="price-cta" onClick={() => alert('Redirecionando para checkout...')}>
-              Quero Transformar Minha Vida! 💰
+              Quero Transformar Minha Vida!
             </button>
             <div className="price-guarantee">
               <span>🛡️</span>
-              <span>Garantia de 7 dias ou seu dinheiro de volta</span>
+              <span>Garantia de 7 dias ou seu dinheiro de volta!</span>
             </div>
           </div>
         </div>
