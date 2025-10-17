@@ -688,7 +688,7 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 430px) {
   .hero-title {
     font-size: 1.8rem;
     text-align: left;
@@ -841,6 +841,18 @@ html {
 
 .float-animation {
   animation: float 3s ease-in-out infinite;
+}
+
+@media (max-width: 420px) {
+  .hero-cta {
+    font-size: 1.1rem;
+    margin-bottom: -50px;
+    width: 270px;
+  }
+
+  .price-cta{
+    padding: 20px 40px;
+  }
 }
 
 @media (max-width: 360px) {
