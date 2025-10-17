@@ -705,9 +705,10 @@ body {
   }
 
   .hero-cta {
-    padding: 12px 25px;
-    font-size: 1rem;
-    margin-bottom: -30px;
+    padding: 18px 25px;
+    font-size: 1.2rem;
+    margin-bottom: -50px;
+    width: 300px;
   }
 
   .hero-section {
@@ -840,4 +841,12 @@ html {
 
 .float-animation {
   animation: float 3s ease-in-out infinite;
+}
+
+@media (max-width: 360px) {
+  .hero-cta {
+    font-size: 1.1rem;
+    margin-bottom: -50px;
+    width: 270px;
+  }
 }

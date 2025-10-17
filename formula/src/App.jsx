@@ -138,6 +138,7 @@ function App() {
           <p className="hero-subtitle">
             Desbloqueie o Poder do Seu Bolso: Estratégias Simples, Lucros Reais, Sem Complicações
           </p>
+          <br />
           <button className="hero-cta" onClick={scrollToPrice}>
             Quero Começar Agora! 🔥
           </button>
